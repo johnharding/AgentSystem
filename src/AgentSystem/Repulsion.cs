@@ -129,8 +129,7 @@ namespace AgentSystem
             {
                 if (isSurface)
                 {
-                    double u, v;
-                    mySurface.ClosestPoint(localPoints[i], out u, out v);
+                    mySurface.ClosestPoint(localPoints[i], out double u, out double v);
                     localPoints[i] = mySurface.PointAt(u, v);
                 }
                 else
@@ -221,8 +220,7 @@ namespace AgentSystem
                 Point3d newPoint = new Point3d(localPoints[i].X + Velocity[i].X, localPoints[i].Y + Velocity[i].Y, localPoints[i].Z + Velocity[i].Z);
                 if (isSurface)
                 {
-                    double u, v;
-                    mySurface.ClosestPoint(newPoint, out u, out v);
+                    mySurface.ClosestPoint(newPoint, out double u, out double v);
                     localPoints[i] = mySurface.PointAt(u, v);
                 }
                 else
